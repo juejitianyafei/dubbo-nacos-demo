@@ -1,0 +1,45 @@
+###################  系统配置  ###################
+server:
+  port: 8091
+spring:
+  profiles:
+    active: dev
+mybatis:
+  type-aliases-package: com.ty.bean
+  type-handlers-package: com.ty.mapper
+  configuration:
+    map-underscore-to-camel-case: true
+    #设置查询返回值数量，可以被查询数值覆盖
+    default-fetch-size: 100
+    #设置超时时间，它决定驱动等待一个数据库响应的时间
+    default-statement-timeout: 30
+mapper:
+  mappers:
+    - com.ty.mapper
+  not-empty: false
+  identity: MYSQL
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+---
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf-8&useSSL=false
+  application:
+    name: DubboProvider
+  dubbo:
+    server: true
+    registry:
+#      address: zookeeper://127.0.0.1:2181
+      address: nacos://127.0.0.1:8848
+    protocol:
+      name: dubbo
+      port: 20901
+    scan: com.ty.service
+---

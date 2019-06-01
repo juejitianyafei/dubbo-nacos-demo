@@ -1,0 +1,36 @@
+###################  系统配置  ###################
+server:
+  port: 8092
+  servlet:
+    context-path: /dubbo-web
+spring:
+  profiles:
+    active: dev
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+---
+###################  开发配置  ###################
+
+spring:
+  profiles: dev
+  application:
+    name: DubboConsumer
+  dubbo:
+    registry:
+#      address: zookeeper://127.0.0.1:2181
+      address: nacos://127.0.0.1:8848
+      check: false
+    protocol:
+      name: dubbo
+      port: 20902
+    scan: com.ty
+    consumer:
+      check: false
+nacos:
+  config:
+    server-addr: 127.0.0.1:8848
+    namespace: 0ce79092-fcaf-44a4-8a27-fa7050dba30d
+
+
+---
