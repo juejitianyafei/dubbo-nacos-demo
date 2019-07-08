@@ -1,4 +1,4 @@
-package com.lbonline;
+package com.ty;
 
 import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
 import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
