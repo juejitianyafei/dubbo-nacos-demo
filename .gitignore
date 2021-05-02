@@ -7,3 +7,7 @@
 *.iml
 out
 gen
+dubbo-interface/target/dubbo-interface.jar
+dubbo-interface/target/generated-sources/
+dubbo-service/src/main/resources/META-INF/
+dubbo-web/src/main/resources/META-INF/
