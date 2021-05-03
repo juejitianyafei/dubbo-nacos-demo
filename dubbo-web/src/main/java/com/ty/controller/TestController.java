@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class TestController {
 
-
+    //dubbo最新注解
     @DubboReference(version = "1.0.0", timeout = 30000)
     private RemoteService remoteService;
 
