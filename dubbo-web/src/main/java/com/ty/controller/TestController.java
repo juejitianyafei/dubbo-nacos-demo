@@ -31,6 +31,7 @@ public class TestController {
 
     @GetMapping("/config")
     public Object config() {
+    	remoteService.sayHello("张三");
         System.out.println("nacos config boolean value is :" + useNacosConfig);
         System.out.println("nacos config string value is :" + useNacosStringConfig);
         return useNacosConfig;
