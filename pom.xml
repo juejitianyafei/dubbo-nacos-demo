@@ -21,7 +21,7 @@
         <java.version>1.8</java.version>
         <dubbo.version>2.0.0</dubbo.version>
         <zkclient.version>0.10</zkclient.version>
-        <alibaba.fastjson.version>1.2.47</alibaba.fastjson.version>
+        <alibaba.fastjson.version>1.2.83</alibaba.fastjson.version>
         <joda.time.version>2.9.5</joda.time.version>
         <disconf.version>2.6.36</disconf.version>
         <hessian.version>4.0.51</hessian.version>
